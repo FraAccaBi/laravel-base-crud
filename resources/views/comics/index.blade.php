@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <table class="table">
+    <a href="{{route('comics.create')}}">Add</a>
     <thead>
         <tr>
             <th>id</th>

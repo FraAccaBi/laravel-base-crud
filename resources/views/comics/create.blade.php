@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<form action="{{route('comics.store')}}" method="post"></form>
+<form action="{{route('comics.store')}}" method="post">
     @csrf
     <div class="form-group">
         <label for="title">Title</label>

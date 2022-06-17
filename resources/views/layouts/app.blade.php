@@ -17,6 +17,7 @@
         @include('partials.header')
         <main>
             @yield('content')
+            <a href="{{route('comics.index')}}">Elenco fumetti</a>
         </main>
         @include('partials.footer')
         <script src="{{asset('js/app.js')}}"></script>

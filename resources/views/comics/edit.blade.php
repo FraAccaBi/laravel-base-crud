@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<form action="{{route('comics.store')}}" method="post">
+<form action="{{route('comics.update',$comic->id)}}" method="post">
     @csrf
+    @method('PUT')
     <div class="form-group">
         <label for="title">Title</label>
         <input type="text" name="title" id="title" class="form-control" placeholder="Naruto" aria-describedby="titleHelper">
@@ -37,7 +38,7 @@
       <small id="typeHelper" class="text-muted">Type the type here</small>
     </div>
 
-    <button type="submit" class="btn btn-primary">add comic</button>
+    <button type="submit" class="btn btn-primary">EDIT</button>
 </form>
 
 @endsection

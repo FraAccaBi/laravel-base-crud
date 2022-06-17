@@ -30,7 +30,16 @@
             <td>{{$comic->sale_date}}</td>
             <td>{{$comic->type}}</td>
 
-            <td><a href="{{route('comics.show', $comic->id)}}"> View</a> - Edit -Delete</td>
+            <td>
+                <a href="{{route('comics.show', $comic->id)}}"> View -</a>
+                <a href="{{route('comics.edit', $comic->id)}}"> Edit -</a>
+                <form action="{{route('comics.destroy',$comic->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                </form>
+                {{-- <a href="{{route('comics.destroy', $comic->id)}}"> Delete</a> --}}
+            </td>
         </tr>
 
         @endforeach
